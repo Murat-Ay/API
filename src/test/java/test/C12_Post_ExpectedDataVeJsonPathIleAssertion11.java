@@ -3,12 +3,11 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Assert;
 import org.junit.Test;
-import java.util.ResourceBundle;
+
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
-public class C12_Post_ExpectedDataVeJsonPathIleAssertion {
+public class C12_Post_ExpectedDataVeJsonPathIleAssertion11 {
     /*
    https://restful-booker.herokuapp.com/booking url’ine
    asagidaki body'ye sahip bir POST request gonderdigimizde
@@ -76,11 +75,5 @@ public class C12_Post_ExpectedDataVeJsonPathIleAssertion {
         // 4 - Assertion
         JsonPath resJS = response.jsonPath();
         assertEquals(expBody.getJSONObject("booking").get("firstname"),resJS.get("booking.firstname"));
-        assertEquals(expBody.getJSONObject("booking").get("lastname"),resJS.get("booking.lastname"));
-        assertEquals(expBody.getJSONObject("booking").get("totalprice"),resJS.get("booking.totalprice"));
-        assertEquals(expBody.getJSONObject("booking").get("depositpaid"),resJS.get("booking.depositpaid"));
-        assertEquals(expBody.getJSONObject("booking").get("additionalneeds"),resJS.get("booking.additionalneeds"));
-        assertEquals(expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkin"),resJS.get("booking.bookingdates.checkin"));
-        assertEquals(expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkout"),resJS.get("booking.bookingdates.checkout"));
     }
 }
