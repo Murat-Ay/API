@@ -2,6 +2,8 @@ package testData;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 public class TestDataJsonPlaceHolder {
 
     public String contentType= "application/json; charset=utf-8";
@@ -26,4 +28,14 @@ public class TestDataJsonPlaceHolder {
 
         return reqBody;
     }
+    public HashMap requestBodyOlusturMap(){
+        HashMap<String,Object> requestBodyMap = new HashMap<>();
+        requestBodyMap.put( "title","Ahmet");
+        requestBodyMap.put( "body","Merhaba");
+        requestBodyMap.put( "userId",10);
+        requestBodyMap.put( "id",70);
+
+        return requestBodyMap;
+    }
+
 }
