@@ -30,13 +30,13 @@ public class C23_Get_DeSerialization extends DummyBaseURL {
     @Test
     public void get01(){
         // 1 - Request icin Url ve Body hazirla
-        dummySpec.pathParams("pp1","employee","pp2",3);
+        specDummy.pathParams("pp1","employee","pp2",3);
         // 2 - Expected Data hazirla
         TestDataDummy testDataDummy = new TestDataDummy();
         HashMap <String,Object> expDataMap = testDataDummy.expectedDataOlusturMap();
         System.out.println(expDataMap);
         // 3 - Response'u kaydet
-        Response response = given().spec(dummySpec).when().get("/{pp1}/{pp2}");
+        Response response = given().spec(specDummy).when().get("/{pp1}/{pp2}");
         response.prettyPrint();
         // 4 - Assertion
         // Not : Bizim hazirlamis oldugumuz Expected Data Map formatinda.
