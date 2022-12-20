@@ -41,8 +41,7 @@ public class C28_Post_Pojo extends HerokuAppBaseUrl {
                             ,
                             "additionalneeds":"wi-fi"
                                   }
-                        }
-             */
+                        }             */
     @Test
     public void post01(){
         // 1 - Request icin gerekli URL ve Body hazirla
